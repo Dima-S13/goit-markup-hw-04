@@ -8,7 +8,7 @@
 --portfolio-button-shadow: #e7e9fc;
 --slate-customers-color: #8E8F99;
 --green-hover-icons: #31D0AA;
---transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+}
 
 body 
 {font-family: "Roboto", sans-serif;
@@ -124,7 +124,7 @@ gap: 40px;
     letter-spacing: 0.02em;
     
     
-    transition: color var(--transition);}
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
     .nav-link:hover,
         .nav-link:focus 
@@ -158,7 +158,7 @@ gap: 40px;
         line-height: 1.5;
         letter-spacing: 0.02em;
         color: var(--slate-contacts-color);
-        transition: color var(--transition);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
      }
 
 .header-contacts:hover,
@@ -178,9 +178,7 @@ gap: 40px;
   padding: 188px 0;
   max-width: 1440px;
   margin: 0 auto;
-  }  
-    /* linear-gradient(to bottom, rgba(46, 47, 66, 0.7)), */
-    
+  }   
 
  .hero-title 
   {font-weight: 700;
@@ -213,13 +211,14 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
      height: 56px;
      min-width: 169px;
 
-    transition: background-color var(--transition);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
                   
   .hero-btn:hover,
   .hero-btn:focus
         { background-color: var(--hover-ocean-color);
-        border: 1px solid transparent;} 
+        border: 1px solid transparent;
+     } 
 
         /* ========= ADVANTAGES ========= */
   .advantages-section 
@@ -305,6 +304,11 @@ margin-bottom: 72px;}
  .activity-img 
  {display: block;}
 
+ .activity-item{transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+ .activity-item:hover,
+ .activity-item:focus
+ {transform: scale(1.05);}
+
  /* ========= OUR TEAM ========= */
 .team-section 
 {background-color: var(--cloud-suptitle-light);
@@ -337,6 +341,9 @@ margin-bottom: 72px;}
 
   width: calc((100% - 72px) / 4);}
 
+    /* .team-item:hover,
+        .team-item:focus
+        {transform: scale(1.03);} */
 .names-container 
 {padding: 32px 0;}
 
@@ -417,7 +424,8 @@ width: 168px;
 height: 88px;
 padding: 16px 32px;
 
-transition: fill var(--transition), border-color var(--transition);}
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .customers-icon
 {fill: currentColor;}
@@ -425,11 +433,15 @@ transition: fill var(--transition), border-color var(--transition);}
     .customers-link:hover,
         .customers-link:focus
         {border-color: var(--hover-ocean-color);
-        color: var(--hover-ocean-color);}
+        color: var(--hover-ocean-color);
+      /* transform: scale(1.03); */
+    }
 
         .customers-icon:hover,
         .customers-icon:focus 
-    {    fill: var(--hover-ocean-color);}
+    {    fill: var(--hover-ocean-color);
+    /* transform: scale(1.05); */
+  }
 
 /* ========= FOOTER ========= */
 .footer-section
@@ -499,7 +511,8 @@ background-color: var(--iris-btn-background);}
 .social-icon-foot
 {fill: var(--cloud-suptitle-light);
 
-transition: color var(--transition), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .social-link-foot:hover,
 .social-link-foot:focus
@@ -543,6 +556,7 @@ margin-bottom: 72px;}
     0px 2px 1px rgba(0, 0, 0, 0.08), 
     0px 2px 2px rgba(0, 0, 0, 0.12);
        border: transparent;
+      transform: scale(1.07);
        }
 
 .portfolio-image-list
@@ -569,7 +583,8 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 .portfolio-image-link:focus
 {box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
   0px 1px 1px rgba(46, 47, 66, 0.16),
-  0px 2px 1px rgba(46, 47, 66, 0.08);}
+  0px 2px 1px rgba(46, 47, 66, 0.08);
+}
 
 .wraper
 {position: relative;
@@ -577,18 +592,19 @@ transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .overlay
 {padding: 40px 32px;
- 
+  background-color: var(--hover-ocean-color);
   position: absolute;
    top: 0;
    left: 0;
   width: 100%;
     height: 100%;
-      background-color: var(--hover-ocean-color);
+    
 transform: translateY(100%);
-transition: transform var(--transition);}
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .wraper:hover .overlay 
-{transform: translateY(0%);}
+{transform: translateY(0%);
+}
 
 .overlay-text 
 {color: var(--cloud-suptitle-light);
