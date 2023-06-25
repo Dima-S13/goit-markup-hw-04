@@ -105,11 +105,8 @@ align-items: center;}
 
 .nav-list
 {display: flex;
-gap: 40px;
+gap: 40px;}
 
-}
-
-.nav-item {}
 
  .nav-link 
  { padding-top: 24px;
@@ -122,7 +119,7 @@ gap: 40px;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--hover-ocean-color);
+    color: var(--main-text-color);
     
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
@@ -132,7 +129,7 @@ gap: 40px;
 
   .active::after {
   content: "";
-  color: var(--hover-ocean-color);
+  
    background-color: var(--hover-ocean-color);
    bottom: -1px;
    left: 0;
@@ -142,6 +139,9 @@ gap: 40px;
    width: 100%;
    border-radius: 2px;
    height: 4px;                }
+     .active {
+      color: var(--hover-ocean-color);
+     }
 
     .page-address
     {font-style: normal;
@@ -681,22 +681,23 @@ margin-bottom: 8px;}
   padding: 0;
 
   cursor: pointer;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-  border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 display: flex;
 justify-content: center;
 align-items: center;
   
 border: 1px solid rgba(0, 0, 0, 0.1);
 background-color: var(--portfolio-button-shadow);
-
-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.close-btn-icon {transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .close-btn:hover,
 .close-btn:focus 
 {background-color: #404bbf;
-transform: scale(1.1);}
+transform: scale(1.1);
+border: none;}
 
 .close-btn:hover .close-btn-icon,
 .close-btn:focus .close-btn-icon {
