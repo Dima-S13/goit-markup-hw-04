@@ -129,11 +129,9 @@ gap: 40px;}
 
   .active::after {
   content: "";
-  
-   background-color: var(--hover-ocean-color);
+     background-color: var(--hover-ocean-color);
    bottom: -1px;
    left: 0;
-   margin-top: 20px;
    display: block;
   position: absolute;
    width: 100%;
@@ -712,4 +710,54 @@ border: none;}
   fill: var(--main-bg-color);
   border: none;
   transform: scale(1.1);
+}
+
+/* ============= Modal FORM ============= */
+.form-suptittle
+{margin-top: 72px;
+margin-bottom: 16px;
+width: 360px;
+
+color: var(--main-text-color);
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.32px;}
+
+.form 
+{ display: flex;
+flex-direction: column;
+gap: 12px;
+padding: 8px;
+border: 1px solid #212121;
+max-width: 300px;
+}
+.form-button {
+  align-self: flex-start;
+}
+
+.form-input {
+  padding: 4px;
+  color: #212121;
+  border: 1px solid blue;
+  border-radius: 4px;
+  outline: none;
+}
+.form-label {
+  display: flex;
+  flex-direction: column;
+  transition: color 150ms ease-in-out;
+}
+
+.form-label:focus-within {
+  color: #009688;
+}
+
+.form-input::placeholder {
+  color: #616161;
+}
+
+.form-input:placeholder-shown {
+  border-color: teal;
 }
